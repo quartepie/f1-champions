@@ -1,0 +1,38 @@
+app-champion-list {
+  height: 90%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  margin-right: 1.5rem;
+  margin-left: 0.2rem;
+  padding-bottom: 0.4rem;
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  .close-btn {
+    display: block;
+  }
+}

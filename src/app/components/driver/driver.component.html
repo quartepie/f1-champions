@@ -1,0 +1,9 @@
+<div class="driver">
+  <div class="driver__number--wrapper">
+    <div class="driver__number">
+      {{ driver.number }}
+    </div>
+  </div>
+  <fa-icon *ngIf="showCrown" [icon]="icon"></fa-icon>
+  {{ driver.firstName }} {{ driver.lastName }}
+</div>

@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~primeicons/primeicons.css";
+//@import "~primeng/resources/themes/lara-light-blue/theme.css";
+//@import "~primeng/resources/primeng.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800;900&display=swap');
+@import "~reset-css/reset.css";
+
+body, div {
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
+}
+
+:root {
+  --accent-color: #DC0000;
+  --highlight-color: #ffd9d9;
+  --number-label-bg: #808080;
+  --table-header-bg: #f6f6f6;
+}
+html {
+  //font-size: 11px;
+}

@@ -1,0 +1,15 @@
+header {
+  background-color: var(--accent-color);
+  height: 3rem;
+  padding: .5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+}
+
+.logo {
+  &__container, &__img {
+    height: 100%;
+  }
+}

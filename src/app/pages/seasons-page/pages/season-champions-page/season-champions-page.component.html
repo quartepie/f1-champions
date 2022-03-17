@@ -1,0 +1,9 @@
+<div class="header">
+  <button class="close-btn" (click)="closeList()">
+    <fa-icon [icon]="crossIcon"></fa-icon>
+  </button>
+  <h2 class="title" *ngIf="year">Champions of the {{ year }}</h2>
+</div>
+<app-champion-list
+  [class.overflow-hidden]="isLoading$ | async"
+  [isLoading]="(isLoading$ | async)!" [champions]="(champions$ | async)!"></app-champion-list>

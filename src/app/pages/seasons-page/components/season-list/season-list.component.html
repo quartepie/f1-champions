@@ -1,0 +1,21 @@
+<div class="timeline">
+  <div class="timeline__item"
+       *ngFor="let season of seasons; trackBy: trackbyFn"
+       (click)="yearClick.emit(season.year)"
+       [class.highlight]="selectedYear === season.year"
+  >
+    <div class="point"></div>
+    <div class="point__title">
+      <div class="year">{{ season.year }}</div>
+      <app-driver [driver]="season.driver" [showCrown]="true"></app-driver>
+    </div>
+  </div>
+
+</div>
+<button class="load-more" *ngIf="!isLoading && !allLoaded" (click)="loadMore.emit()">
+  Load more
+</button>
+
+<div class="loading" *ngIf="isLoading">
+  Loading...
+</div>

@@ -1,0 +1,24 @@
+.driver {
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  &__number {
+    background-color: var(--number-label-bg);
+    margin-right: .5rem;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--wrapper {
+      display: inline-block;
+      min-width: 1.5rem;
+    }
+  }
+}

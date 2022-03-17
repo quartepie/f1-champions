@@ -1,0 +1,15 @@
+<h1 class="title">Select season</h1>
+<div class="container">
+  <div class="left">
+    <app-season-list (yearClick)="getYearChampions($event)"
+                     (loadMore)="loadMore()"
+                     [selectedYear]="selectedYear"
+                     [allLoaded]="!(canLoadSeasons$ | async)"
+                     [isLoading]="(seasonsLoading$ | async)!"
+                     [seasons]="(years$ | async)!"></app-season-list>
+  </div>
+  <div class="right" [class.mobile-hidden]="!selectedYear" [@enter]="selectedYear ? 'show': ''">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

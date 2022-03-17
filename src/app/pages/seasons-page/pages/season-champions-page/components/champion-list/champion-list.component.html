@@ -1,0 +1,22 @@
+<div class="table" *ngIf="!isLoading; else loader">
+  <div class="row table__header">
+    <div class="cell">Round</div>
+    <div class="cell">Driver</div>
+    <div class="cell">Race</div>
+  </div>
+  <div class="table__body">
+    <div class="row" *ngFor="let row of champions; trackBy: trackbyFn" [class.highlight]="row.driver.isSeasonWinner">
+      <div class="cell center">{{ row.round }}</div>
+      <div class="cell" [attr.title]="row.driver.firstName + ' ' + row.driver.lastName">
+        <app-driver [driver]="row.driver" [showCrown]="row.driver.isSeasonWinner"></app-driver>
+      </div>
+      <div class="cell" [attr.title]="row.raceName">
+        {{row.raceName}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loader>
+  <div class="loading">Loading...</div>
+</ng-template>

@@ -1,0 +1,104 @@
+$main-color: var(--accent-color);
+
+:host {
+  display: block;
+  padding-bottom: 2rem;
+}
+
+app-driver {
+  margin-left: 1.5rem;
+  opacity: 0.1;
+  transition: opacity 1s ease;
+}
+
+.timeline {
+
+  &__item {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 5rem;
+        position: absolute;
+        top: 80%;
+        left: 1rem;
+        transform: translateX(-1px);
+        background-color: $main-color;
+      }
+
+    }
+  }
+}
+
+.year {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: transform .2s ease;
+  transform-origin: left;
+
+  width: 6.5rem;
+}
+
+.point {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: $main-color;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      .year {
+        transform: scale(1.3);
+      }
+
+      app-driver {
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+.load-more, .loading {
+  color: $main-color;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+}
+
+.load-more {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.loading {
+  font-size: 1.5rem;
+  padding-left: 6px;
+}
+
+.highlight {
+  app-driver {
+    opacity: 1;
+  }
+
+  .year {
+    transform: scale(1.3);
+  }
+}
