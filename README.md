@@ -6,10 +6,6 @@ Simple single-page app fueled by Ergast Formula 1 API
 
 Run `ng serve` or `npm start` for a dev server and navigate to `http://localhost:4200/`.
 
-## ☁️ Try it in cloud
-
-You can proceed to `stackblitz link` to view and preview this in cloud IDE.
-
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
